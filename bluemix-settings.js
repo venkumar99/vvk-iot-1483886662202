@@ -1,3 +1,4 @@
+/*eslint-env node */
 /**
  * Copyright 2014 IBM Corp.
  *
@@ -51,7 +52,9 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
-    functionGlobalContext: { },
+    functionGlobalContext: {
+    	crc:require('cr')
+    },
 
     storageModule: require("./couchstorage")
 }
